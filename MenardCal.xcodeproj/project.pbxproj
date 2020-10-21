@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE5E62802540666C00669091 /* MenardCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E627F2540666C00669091 /* MenardCalApp.swift */; };
+		CE5E62822540666C00669091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E62812540666C00669091 /* ContentView.swift */; };
+		CE5E62842540667500669091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E62832540667500669091 /* Assets.xcassets */; };
+		CE5E62872540667500669091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E62862540667500669091 /* Preview Assets.xcassets */; };
+		CE5E62922540667500669091 /* MenardCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E62912540667500669091 /* MenardCalTests.swift */; };
+		CE5E629D2540667500669091 /* MenardCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E629C2540667500669091 /* MenardCalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE5E628E2540667500669091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5E62742540666C00669091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5E627B2540666C00669091;
+			remoteInfo = MenardCal;
+		};
+		CE5E62992540667500669091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5E62742540666C00669091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5E627B2540666C00669091;
+			remoteInfo = MenardCal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE5E627C2540666C00669091 /* MenardCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenardCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E627F2540666C00669091 /* MenardCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenardCalApp.swift; sourceTree = "<group>"; };
+		CE5E62812540666C00669091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE5E62832540667500669091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE5E62862540667500669091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE5E62882540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5E628D2540667500669091 /* MenardCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenardCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E62912540667500669091 /* MenardCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenardCalTests.swift; sourceTree = "<group>"; };
+		CE5E62932540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5E62982540667500669091 /* MenardCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenardCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E629C2540667500669091 /* MenardCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenardCalUITests.swift; sourceTree = "<group>"; };
+		CE5E629E2540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE5E62792540666C00669091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E628A2540667500669091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E62952540667500669091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE5E62732540666C00669091 = {
+			isa = PBXGroup;
+			children = (
+				CE5E627E2540666C00669091 /* MenardCal */,
+				CE5E62902540667500669091 /* MenardCalTests */,
+				CE5E629B2540667500669091 /* MenardCalUITests */,
+				CE5E627D2540666C00669091 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE5E627D2540666C00669091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E627C2540666C00669091 /* MenardCal.app */,
+				CE5E628D2540667500669091 /* MenardCalTests.xctest */,
+				CE5E62982540667500669091 /* MenardCalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5E627E2540666C00669091 /* MenardCal */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E627F2540666C00669091 /* MenardCalApp.swift */,
+				CE5E62812540666C00669091 /* ContentView.swift */,
+				CE5E62832540667500669091 /* Assets.xcassets */,
+				CE5E62882540667500669091 /* Info.plist */,
+				CE5E62852540667500669091 /* Preview Content */,
+			);
+			path = MenardCal;
+			sourceTree = "<group>";
+		};
+		CE5E62852540667500669091 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E62862540667500669091 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE5E62902540667500669091 /* MenardCalTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E62912540667500669091 /* MenardCalTests.swift */,
+				CE5E62932540667500669091 /* Info.plist */,
+			);
+			path = MenardCalTests;
+			sourceTree = "<group>";
+		};
+		CE5E629B2540667500669091 /* MenardCalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E629C2540667500669091 /* MenardCalUITests.swift */,
+				CE5E629E2540667500669091 /* Info.plist */,
+			);
+			path = MenardCalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE5E627B2540666C00669091 /* MenardCal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5E62A12540667500669091 /* Build configuration list for PBXNativeTarget "MenardCal" */;
+			buildPhases = (
+				CE5E62782540666C00669091 /* Sources */,
+				CE5E62792540666C00669091 /* Frameworks */,
+				CE5E627A2540666C00669091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MenardCal;
+			productName = MenardCal;
+			productReference = CE5E627C2540666C00669091 /* MenardCal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE5E628C2540667500669091 /* MenardCalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5E62A42540667500669091 /* Build configuration list for PBXNativeTarget "MenardCalTests" */;
+			buildPhases = (
+				CE5E62892540667500669091 /* Sources */,
+				CE5E628A2540667500669091 /* Frameworks */,
+				CE5E628B2540667500669091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE5E628F2540667500669091 /* PBXTargetDependency */,
+			);
+			name = MenardCalTests;
+			productName = MenardCalTests;
+			productReference = CE5E628D2540667500669091 /* MenardCalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE5E62972540667500669091 /* MenardCalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5E62A72540667500669091 /* Build configuration list for PBXNativeTarget "MenardCalUITests" */;
+			buildPhases = (
+				CE5E62942540667500669091 /* Sources */,
+				CE5E62952540667500669091 /* Frameworks */,
+				CE5E62962540667500669091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE5E629A2540667500669091 /* PBXTargetDependency */,
+			);
+			name = MenardCalUITests;
+			productName = MenardCalUITests;
+			productReference = CE5E62982540667500669091 /* MenardCalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE5E62742540666C00669091 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					CE5E627B2540666C00669091 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					CE5E628C2540667500669091 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = CE5E627B2540666C00669091;
+					};
+					CE5E62972540667500669091 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = CE5E627B2540666C00669091;
+					};
+				};
+			};
+			buildConfigurationList = CE5E62772540666C00669091 /* Build configuration list for PBXProject "MenardCal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE5E62732540666C00669091;
+			productRefGroup = CE5E627D2540666C00669091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE5E627B2540666C00669091 /* MenardCal */,
+				CE5E628C2540667500669091 /* MenardCalTests */,
+				CE5E62972540667500669091 /* MenardCalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE5E627A2540666C00669091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5E62872540667500669091 /* Preview Assets.xcassets in Resources */,
+				CE5E62842540667500669091 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E628B2540667500669091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E62962540667500669091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE5E62782540666C00669091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5E62822540666C00669091 /* ContentView.swift in Sources */,
+				CE5E62802540666C00669091 /* MenardCalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E62892540667500669091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5E62922540667500669091 /* MenardCalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5E62942540667500669091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5E629D2540667500669091 /* MenardCalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE5E628F2540667500669091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5E627B2540666C00669091 /* MenardCal */;
+			targetProxy = CE5E628E2540667500669091 /* PBXContainerItemProxy */;
+		};
+		CE5E629A2540667500669091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5E627B2540666C00669091 /* MenardCal */;
+			targetProxy = CE5E62992540667500669091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE5E629F2540667500669091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE5E62A02540667500669091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE5E62A22540667500669091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MenardCal/Preview Content\"";
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MenardCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE5E62A32540667500669091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MenardCal/Preview Content\"";
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MenardCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE5E62A52540667500669091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				INFOPLIST_FILE = MenardCalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenardCal.app/MenardCal";
+			};
+			name = Debug;
+		};
+		CE5E62A62540667500669091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				INFOPLIST_FILE = MenardCalTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MenardCal.app/MenardCal";
+			};
+			name = Release;
+		};
+		CE5E62A82540667500669091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				INFOPLIST_FILE = MenardCalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MenardCal;
+			};
+			name = Debug;
+		};
+		CE5E62A92540667500669091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46Q4GVBUS8;
+				INFOPLIST_FILE = MenardCalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Powers.Ahart.MenardCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MenardCal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE5E62772540666C00669091 /* Build configuration list for PBXProject "MenardCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5E629F2540667500669091 /* Debug */,
+				CE5E62A02540667500669091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5E62A12540667500669091 /* Build configuration list for PBXNativeTarget "MenardCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5E62A22540667500669091 /* Debug */,
+				CE5E62A32540667500669091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5E62A42540667500669091 /* Build configuration list for PBXNativeTarget "MenardCalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5E62A52540667500669091 /* Debug */,
+				CE5E62A62540667500669091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5E62A72540667500669091 /* Build configuration list for PBXNativeTarget "MenardCalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5E62A82540667500669091 /* Debug */,
+				CE5E62A92540667500669091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE5E62742540666C00669091 /* Project object */;
+}
