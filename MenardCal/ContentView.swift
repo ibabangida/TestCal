@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
+  var apptTimes: [ApptInfo] = []
+
+  var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+
+  var body: some View {
+    LazyVGrid(columns: columns) {
+      ForEach(apptTimes) { appTime in
+        Button(action: { print("\(appTime.hrs) pressed") }, label: {
+          Text("\(appTime.hrs):\(appTime.min)")
             .padding()
+        })
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView(apptTimes: testData)
+  }
 }
