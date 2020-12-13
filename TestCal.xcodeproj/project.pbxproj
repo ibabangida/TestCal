@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034A20B255FC5690024EF55 /* WeekDataManager.swift */; };
+		70AB6E18254572B2008B458A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AB6E17254572B2008B458A /* App.plist */; };
+		70FC77362550F49B00F055CE /* ApptData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77352550F49B00F055CE /* ApptData.swift */; };
+		70FC773B2550F60C00F055CE /* ApptDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC773A2550F60C00F055CE /* ApptDataManager.swift */; };
+		70FC77432557788400F055CE /* MonthDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77422557788400F055CE /* MonthDataManger.swift */; };
 		CE5E62802540666C00669091 /* MenardCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E627F2540666C00669091 /* MenardCalApp.swift */; };
 		CE5E62822540666C00669091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E62812540666C00669091 /* ContentView.swift */; };
 		CE5E62842540667500669091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E62832540667500669091 /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7034A20B255FC5690024EF55 /* WeekDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataManager.swift; sourceTree = "<group>"; };
+		70AB6E17254572B2008B458A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
+		70FC77352550F49B00F055CE /* ApptData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptData.swift; sourceTree = "<group>"; };
+		70FC773A2550F60C00F055CE /* ApptDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptDataManager.swift; sourceTree = "<group>"; };
+		70FC77422557788400F055CE /* MonthDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDataManger.swift; sourceTree = "<group>"; };
 		CE5E627C2540666C00669091 /* MenardCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenardCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E627F2540666C00669091 /* MenardCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenardCalApp.swift; sourceTree = "<group>"; };
 		CE5E62812540666C00669091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,12 +107,17 @@
 		CE5E627E2540666C00669091 /* MenardCal */ = {
 			isa = PBXGroup;
 			children = (
+				70FC77352550F49B00F055CE /* ApptData.swift */,
+				70FC773A2550F60C00F055CE /* ApptDataManager.swift */,
 				CE5E627F2540666C00669091 /* MenardCalApp.swift */,
 				CE5E62812540666C00669091 /* ContentView.swift */,
 				CE5E62AD254067A100669091 /* ApptInfo.swift */,
 				CE5E62832540667500669091 /* Assets.xcassets */,
 				CE5E62882540667500669091 /* Info.plist */,
 				CE5E62852540667500669091 /* Preview Content */,
+				70AB6E17254572B2008B458A /* App.plist */,
+				70FC77422557788400F055CE /* MonthDataManger.swift */,
+				7034A20B255FC5690024EF55 /* WeekDataManager.swift */,
 			);
 			path = MenardCal;
 			sourceTree = "<group>";
@@ -211,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE5E62772540666C00669091 /* Build configuration list for PBXProject "MenardCal" */;
+			buildConfigurationList = CE5E62772540666C00669091 /* Build configuration list for PBXProject "TestdCal" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -236,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AB6E18254572B2008B458A /* App.plist in Resources */,
 				CE5E62872540667500669091 /* Preview Assets.xcassets in Resources */,
 				CE5E62842540667500669091 /* Assets.xcassets in Resources */,
 			);
@@ -262,7 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FC77362550F49B00F055CE /* ApptData.swift in Sources */,
+				70FC773B2550F60C00F055CE /* ApptDataManager.swift in Sources */,
+				7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */,
 				CE5E62AE254067A100669091 /* ApptInfo.swift in Sources */,
+				70FC77432557788400F055CE /* MonthDataManger.swift in Sources */,
 				CE5E62822540666C00669091 /* ContentView.swift in Sources */,
 				CE5E62802540666C00669091 /* MenardCalApp.swift in Sources */,
 			);
@@ -547,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE5E62772540666C00669091 /* Build configuration list for PBXProject "MenardCal" */ = {
+		CE5E62772540666C00669091 /* Build configuration list for PBXProject "TestdCal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE5E629F2540667500669091 /* Debug */,

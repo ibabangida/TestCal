@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppointedTimeSet</key>
+	<dict>
+		<key>item 0</key>
+		<string>10:00</string>
+		<key>item 1</key>
+		<string>11:00</string>
+		<key>item 2</key>
+		<string>13:00</string>
+		<key>item 3</key>
+		<string>14:00</string>
+		<key>item 4</key>
+		<string>16:00</string>
+		<key>item 5</key>
+		<string>17:00</string>
+		<key>item 6</key>
+		<string>19:00</string>
+		<key>item 7</key>
+		<string>19:30</string>
+	</dict>
+</dict>
+</plist>
