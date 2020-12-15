@@ -1,6 +1,6 @@
 //
 //  WeekDataManager.swift
-//  MenardCal
+//  TestCal
 //
 //  Created by Keisuke Iba on 2020/11/14.
 //
@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 
-class WeekDataManger : ObservableObject {
-    @Published private var year: Int
-    @Published private var month: Int
-    @Published private var target_date: Date
-    @Published private var dates: [Date] = []
+class WeekDataManger {
+    private var year: Int
+    private var month: Int
+    private var target_date: Date
+    private var dates: [Date] = []
  
     init() {
         let today = Date()

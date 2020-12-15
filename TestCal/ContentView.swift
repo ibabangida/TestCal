@@ -1,15 +1,15 @@
 //
 //  ContentView.swift
-//  MenardCal
+//  TestCal
 //
-//  Created by AhartIII on 2020/10/21.
+//  Created by Keisuke Iba on 2020/11/08.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var month_data_manager = MonthDataManger()
-    @ObservedObject private var week_data_manager = WeekDataManger()
+    private var month_data_manager = MonthDataManger()
+    private var week_data_manager = WeekDataManger()
     
     @State private var selected_mode = 0
     

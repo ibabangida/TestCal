@@ -1,14 +1,14 @@
 //
-//  MenardCalApp.swift
-//  MenardCal
+//  TestCalApp.swift
+//  TestCal
 //
-//  Created by AhartIII on 2020/10/21.
+//  Created by Keisuke Iba on 2020/11/08.
 //
 
 import SwiftUI
 
 @main
-struct MenardCalApp: App {
+struct TestCalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -16,7 +16,7 @@ struct MenardCalApp: App {
     }
 }
 
-struct MenardCalApp_Previews: PreviewProvider {
+struct TestCalApp_Previews: PreviewProvider {
     static var previews: some View {
         Text("Hello, World!")
     }

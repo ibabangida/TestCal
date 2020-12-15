@@ -1,13 +1,13 @@
 //
-//  MenardCalUITests.swift
-//  MenardCalUITests
+//  TestCalUITests.swift
+//  TestCalUITests
 //
-//  Created by AhartIII on 2020/10/21.
+//  Created by Keisuke IBa on 2020/10/21.
 //
 
 import XCTest
 
-class MenardCalUITests: XCTestCase {
+class TestCalUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

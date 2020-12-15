@@ -1,14 +1,14 @@
 //
-//  MenardCalTests.swift
-//  MenardCalTests
+//  TestCalTests.swift
+//  TestCalTests
 //
-//  Created by AhartIII on 2020/10/21.
+//  Created by Keisuke Iba on 2020/10/21.
 //
 
 import XCTest
-@testable import MenardCal
+@testable import TestCal
 
-class MenardCalTests: XCTestCase {
+class TestCalTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

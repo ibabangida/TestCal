@@ -1,6 +1,6 @@
 //
 //  ApptDataManager.swift
-//  MenardCal
+//  TestCal
 //
 //  Created by Keisuke Iba on 2020/11/03.
 //
