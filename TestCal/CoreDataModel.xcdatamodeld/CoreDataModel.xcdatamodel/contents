@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataRoot" representedClassName="CoreDataRoot" syncable="YES">
+        <relationship name="reservation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Reservation" inverseName="controller" inverseEntity="Reservation"/>
+    </entity>
+    <entity name="Reservation" representedClassName="Reservation" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="min" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="staff_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="controller" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataRoot" inverseName="reservation" inverseEntity="CoreDataRoot"/>
+    </entity>
+    <elements>
+        <element name="CoreDataRoot" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Reservation" positionX="-45" positionY="18" width="128" height="148"/>
+    </elements>
+</model>

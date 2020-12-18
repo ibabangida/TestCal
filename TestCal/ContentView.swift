@@ -13,8 +13,8 @@ struct ContentView: View {
     
     @State private var selected_mode = 0
     
-    @State private var year: Int = Calendar.current.component(.year, from: Date())
-    @State private var month: Int =  Calendar.current.component(.month, from: Date())
+    @State private var year: Int = Calendar(identifier: .gregorian).component(.year, from: Date())
+    @State private var month: Int =  Calendar(identifier: .gregorian).component(.month, from: Date())
     
     init() {}
     

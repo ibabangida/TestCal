@@ -51,7 +51,7 @@ struct Shift : Identifiable {
 // @note: it is a kind of technique to detach programming code from resource.
 //        in this case, resource is the set of possible appointment schedule.
 class DefaultWorkScheduleLoader {
-    var shifts : Array<Shift> = []
+    private var shifts = [String : Array<Shift>]()
     static let shared = DefaultWorkScheduleLoader()
     
     private init() {
@@ -63,16 +63,29 @@ class DefaultWorkScheduleLoader {
         
         if (config != nil) {
             if let prop: [String : Any] = config as? [String : Any] {
-                if let timesets : [String : String] = prop["AppointedTimeSet"] as? [String : String] {
-                    for time in timesets.values.sorted() {
-                        self.shifts.append(Shift(text: time))
+                if let contents : [String : [String : String]] = prop["AppointedTimeSet"] as? [String : [String : String]] {
+                    var dict = [String : Array<String>]()
+                    for content in contents.values {
+                        let key = content["type"]!
+                        let val = content["time"]!
+                        if dict[key] == nil {
+                            dict[key] = []
+                        }
+                        dict[key]!.append(val)
+                    }
+                    
+                    for (key, val) in dict {
+                        shifts[key] = []
+                        for time in val.sorted() {
+                            shifts[key]!.append(Shift(text: time))
+                        }
                     }
                 }
             }
         }
     }
     
-    func getShifts() -> Array<Shift> {
-        return shifts;
+    func getDefaultShifts(type: String) -> Array<Shift> {
+        return shifts[type]!;
     }
 }

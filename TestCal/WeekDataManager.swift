@@ -16,7 +16,7 @@ class WeekDataManger {
  
     init() {
         let today = Date()
-        let calendar = Calendar.current
+        let calendar = Calendar(identifier: .gregorian)
         let year = calendar.component(.year, from: today)
         let month = calendar.component(.month, from: today)
         
@@ -33,27 +33,27 @@ class WeekDataManger {
         dates.removeAll()
         
         // init value
-        let calendar = Calendar.current
+        let calendar = Calendar(identifier: .gregorian)
         self.year = calendar.component(.year, from: target_date)
         self.month = calendar.component(.month, from: target_date)
         
         // set calendar
         let index = calendar.component(.weekday, from: target_date) - 1
         for i in 0..<7 {
-            let date = Calendar.current.date(byAdding: .day, value: i - index, to: target_date)!
+            let date = Calendar(identifier: .gregorian).date(byAdding: .day, value: i - index, to: target_date)!
             dates.append(date)
         }
     }
     
     // reload next week
     func reloadNextWeek() {
-        target_date = Calendar.current.date(byAdding: .day, value: 7, to: target_date)!
+        target_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: 7, to: target_date)!
         reload()
     }
     
     // reload next week
     func reloadPrevWeek() {
-        target_date = Calendar.current.date(byAdding: .day, value: -7, to: target_date)!
+        target_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: -7, to: target_date)!
         reload()
     }
     
@@ -65,7 +65,7 @@ class WeekDataManger {
     
     // reload given month
     func reloadGivenMonth(year: Int, month: Int) {
-        let calendar = Calendar.current
+        let calendar = Calendar(identifier: .gregorian)
         self.year = year
         self.month = month
         self.target_date = calendar.date(from: DateComponents(year: year, month: month, day: 1))!
@@ -75,7 +75,7 @@ class WeekDataManger {
     
     // get view
     func getView() -> some View {
-        let calendar = Calendar.current
+        let calendar = Calendar(identifier: .gregorian)
         
         return LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 7)) {
             ForEach(0..<7) { i in
