@@ -20,9 +20,13 @@ class CoreDataManager {
             }
         })
         
+        // delete for test
+        if !getCoreDataRoot().isEmpty {
+            //deleteAll()
+        }
+        
         // confirm the existance of CoreDataRoot
-        if (getCoreDataRoot().count == 0)
-        {
+        if getCoreDataRoot().isEmpty {
             let context = container.viewContext
             NSEntityDescription.insertNewObject(forEntityName: "CoreDataRoot", into: context)
             save()
@@ -41,9 +45,35 @@ class CoreDataManager {
         }
     }
     
+    func deleteAll() {
+        while(!getReservations(predicate: nil).isEmpty) {
+            delete(src: getReservations(predicate: nil)[0])
+        }
+        delete(root: getCoreDataRoot()[0])
+    }
+    
     func delete(root: CoreDataRoot) {
         let context = container.viewContext
         context.delete(root)
+    }
+    
+    func delete(src: Reservation) {
+        let context = container.viewContext
+        context.delete(src)
+    }
+    
+    func addReservation(date: Date, category: String, index: Int, hour: Int, min: Int, is_mine: Bool) -> Reservation {
+        let context = container.viewContext
+        let reservation = NSEntityDescription.insertNewObject(forEntityName: "Reservation", into: context) as! Reservation
+        
+        reservation.date = date
+        reservation.category = category
+        reservation.index = Int16(index)
+        reservation.hour = Int16(hour)
+        reservation.min = Int16(min)
+        reservation.is_mine = is_mine
+        
+        return reservation
     }
     
     func getCoreDataRoot() -> [CoreDataRoot] {
@@ -57,14 +87,28 @@ class CoreDataManager {
         }
     }
     
-    func getReservations() -> [Reservation] {
+    func getReservations(predicate: NSPredicate?) -> [Reservation] {
         let context = container.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Reservation")
+        request.predicate = predicate
+        
         do {
             return try context.fetch(request) as! [Reservation]
         }
         catch {
             fatalError()
         }
+    }
+    
+    func getReservation(date: Date, category: String, index: Int) -> Reservation? {
+        let predicate = NSPredicate(format: "date == %@ AND category == %@ AND index == %@", argumentArray: [date as NSDate, category, index])
+        let result = getReservations(predicate: predicate)
+        
+        // check duplicated save data
+        if result.count > 1 {
+            fatalError()
+        }
+        
+        return result.isEmpty ? nil : result[0]
     }
 }
