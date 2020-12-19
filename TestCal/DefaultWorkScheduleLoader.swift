@@ -52,6 +52,7 @@ struct Shift : Identifiable {
 //        in this case, resource is the set of possible appointment schedule.
 class DefaultWorkScheduleLoader {
     private var shifts = [String : Array<Shift>]()
+    private var shift_pattern_num = 0
     static let shared = DefaultWorkScheduleLoader()
     
     private init() {
@@ -78,6 +79,7 @@ class DefaultWorkScheduleLoader {
                         shifts[key] = []
                         for time in val.sorted() {
                             shifts[key]!.append(Shift(text: time))
+                            self.shift_pattern_num += 1
                         }
                     }
                 }
@@ -87,5 +89,9 @@ class DefaultWorkScheduleLoader {
     
     func getDefaultShifts(type: String) -> Array<Shift> {
         return shifts[type]!;
+    }
+    
+    func getShiftPatternNum() -> Int {
+        return self.shift_pattern_num
     }
 }
