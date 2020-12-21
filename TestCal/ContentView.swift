@@ -97,7 +97,7 @@ struct ContentView: View {
                        Text("Week")
                            .tag(1)
             }
-            .padding(.vertical, 10.0)
+            .padding(.vertical, 5.0)
                    .pickerStyle(SegmentedPickerStyle())
             
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 2)) {
