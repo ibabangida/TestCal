@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0242590DCA400952B05 /* CoreDataManager.swift */; };
+		7023D0312590DCA500952B05 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0252590DCA400952B05 /* Preview Content */; };
+		7023D0322590DCA500952B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0262590DCA400952B05 /* Assets.xcassets */; };
+		7023D0332590DCA500952B05 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0272590DCA400952B05 /* CalendarView.swift */; };
+		7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0282590DCA400952B05 /* PopoverCondition.swift */; };
+		7023D0352590DCA500952B05 /* Reservation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */; };
+		7023D0362590DCA500952B05 /* CoreDataRoot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */; };
+		7023D0372590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */; };
+		7023D0382590DCA500952B05 /* Reservation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */; };
+		7023D0392590DCA500952B05 /* BookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02D2590DCA500952B05 /* BookButton.swift */; };
+		7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */; };
 		7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034A20B255FC5690024EF55 /* WeekDataManager.swift */; };
 		70AB6E18254572B2008B458A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AB6E17254572B2008B458A /* App.plist */; };
-		70FC77362550F49B00F055CE /* ApptData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77352550F49B00F055CE /* ApptData.swift */; };
-		70FC773B2550F60C00F055CE /* ApptDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC773A2550F60C00F055CE /* ApptDataManager.swift */; };
 		70FC77432557788400F055CE /* MonthDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77422557788400F055CE /* MonthDataManger.swift */; };
 		CE5E62802540666C00669091 /* TestCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E627F2540666C00669091 /* TestCalApp.swift */; };
 		CE5E62822540666C00669091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E62812540666C00669091 /* ContentView.swift */; };
-		CE5E62842540667500669091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E62832540667500669091 /* Assets.xcassets */; };
 		CE5E62872540667500669091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E62862540667500669091 /* Preview Assets.xcassets */; };
 		CE5E62922540667500669091 /* TestCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E62912540667500669091 /* TestCalTests.swift */; };
 		CE5E629D2540667500669091 /* TestCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E629C2540667500669091 /* TestCalUITests.swift */; };
@@ -39,21 +47,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7023D0242590DCA400952B05 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7023D0252590DCA400952B05 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
+		7023D0262590DCA400952B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7023D0272590DCA400952B05 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		7023D0282590DCA400952B05 /* PopoverCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCondition.swift; sourceTree = "<group>"; };
+		7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRoot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRoot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7023D02D2590DCA500952B05 /* BookButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookButton.swift; sourceTree = "<group>"; };
+		7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		7034A20B255FC5690024EF55 /* WeekDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataManager.swift; sourceTree = "<group>"; };
 		70AB6E17254572B2008B458A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
-		70FC77352550F49B00F055CE /* ApptData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptData.swift; sourceTree = "<group>"; };
-		70FC773A2550F60C00F055CE /* ApptDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptDataManager.swift; sourceTree = "<group>"; };
 		70FC77422557788400F055CE /* MonthDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDataManger.swift; sourceTree = "<group>"; };
-		CE5E627C2540666C00669091 /* TestCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E627C2540666C00669091 /* TestCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TestCal.app; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCal.app"; sourceTree = "<absolute>"; };
 		CE5E627F2540666C00669091 /* TestCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalApp.swift; sourceTree = "<group>"; };
 		CE5E62812540666C00669091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE5E62832540667500669091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5E62862540667500669091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE5E62882540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5E628D2540667500669091 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E628D2540667500669091 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TestCalTests.xctest; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCalTests.xctest"; sourceTree = "<absolute>"; };
 		CE5E62912540667500669091 /* TestCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalTests.swift; sourceTree = "<group>"; };
 		CE5E62932540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5E62982540667500669091 /* TestCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5E62982540667500669091 /* TestCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TestCalUITests.xctest; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCalUITests.xctest"; sourceTree = "<absolute>"; };
 		CE5E629C2540667500669091 /* TestCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalUITests.swift; sourceTree = "<group>"; };
 		CE5E629E2540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWorkScheduleLoader.swift; sourceTree = "<group>"; };
@@ -90,34 +106,31 @@
 				CE5E627E2540666C00669091 /* TestCal */,
 				CE5E62902540667500669091 /* TestCalTests */,
 				CE5E629B2540667500669091 /* TestCalUITests */,
-				CE5E627D2540666C00669091 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		CE5E627D2540666C00669091 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CE5E627C2540666C00669091 /* TestCal.app */,
-				CE5E628D2540667500669091 /* TestCalTests.xctest */,
-				CE5E62982540667500669091 /* TestCalUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CE5E627E2540666C00669091 /* TestCal */ = {
 			isa = PBXGroup;
 			children = (
-				70FC77352550F49B00F055CE /* ApptData.swift */,
-				70FC773A2550F60C00F055CE /* ApptDataManager.swift */,
-				CE5E627F2540666C00669091 /* TestCalApp.swift */,
-				CE5E62812540666C00669091 /* ContentView.swift */,
-				CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */,
-				CE5E62832540667500669091 /* Assets.xcassets */,
-				CE5E62882540667500669091 /* Info.plist */,
-				CE5E62852540667500669091 /* Preview Content */,
+				7023D0252590DCA400952B05 /* Preview Content */,
 				70AB6E17254572B2008B458A /* App.plist */,
+				CE5E62882540667500669091 /* Info.plist */,
+				7023D02D2590DCA500952B05 /* BookButton.swift */,
+				7023D0272590DCA400952B05 /* CalendarView.swift */,
+				CE5E62812540666C00669091 /* ContentView.swift */,
+				7023D0242590DCA400952B05 /* CoreDataManager.swift */,
+				7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */,
+				7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */,
+				CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */,
 				70FC77422557788400F055CE /* MonthDataManger.swift */,
+				7023D0282590DCA400952B05 /* PopoverCondition.swift */,
+				7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */,
+				7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */,
+				CE5E627F2540666C00669091 /* TestCalApp.swift */,
 				7034A20B255FC5690024EF55 /* WeekDataManager.swift */,
+				7023D0262590DCA400952B05 /* Assets.xcassets */,
+				7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */,
+				CE5E62852540667500669091 /* Preview Content */,
 			);
 			path = TestCal;
 			sourceTree = "<group>";
@@ -235,7 +248,7 @@
 				Base,
 			);
 			mainGroup = CE5E62732540666C00669091;
-			productRefGroup = CE5E627D2540666C00669091 /* Products */;
+			productRefGroup = CE5E62732540666C00669091;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -251,9 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7023D0312590DCA500952B05 /* Preview Content in Resources */,
 				70AB6E18254572B2008B458A /* App.plist in Resources */,
 				CE5E62872540667500669091 /* Preview Assets.xcassets in Resources */,
-				CE5E62842540667500669091 /* Assets.xcassets in Resources */,
+				7023D0322590DCA500952B05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,13 +292,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FC77362550F49B00F055CE /* ApptData.swift in Sources */,
-				70FC773B2550F60C00F055CE /* ApptDataManager.swift in Sources */,
+				7023D0362590DCA500952B05 /* CoreDataRoot+CoreDataClass.swift in Sources */,
+				7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */,
+				7023D0332590DCA500952B05 /* CalendarView.swift in Sources */,
+				7023D0352590DCA500952B05 /* Reservation+CoreDataClass.swift in Sources */,
 				7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */,
+				7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */,
 				CE5E62AE254067A100669091 /* DefaultWorkScheduleLoader.swift in Sources */,
+				7023D0392590DCA500952B05 /* BookButton.swift in Sources */,
 				70FC77432557788400F055CE /* MonthDataManger.swift in Sources */,
+				7023D0382590DCA500952B05 /* Reservation+CoreDataProperties.swift in Sources */,
 				CE5E62822540666C00669091 /* ContentView.swift in Sources */,
 				CE5E62802540666C00669091 /* TestCalApp.swift in Sources */,
+				7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */,
+				7023D0372590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +625,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE5E62742540666C00669091 /* Project object */;
 }
