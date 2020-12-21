@@ -21,16 +21,7 @@ class CoreDataManager {
         })
         
         // delete for test
-        if !getCoreDataRoot().isEmpty {
-            //deleteAll()
-        }
-        
-        // confirm the existance of CoreDataRoot
-        if getCoreDataRoot().isEmpty {
-            let context = container.viewContext
-            NSEntityDescription.insertNewObject(forEntityName: "CoreDataRoot", into: context)
-            save()
-        }
+        //deleteAll()
     }
     
     func save() {
@@ -49,12 +40,6 @@ class CoreDataManager {
         while(!getReservations(predicate: nil).isEmpty) {
             delete(src: getReservations(predicate: nil)[0])
         }
-        delete(root: getCoreDataRoot()[0])
-    }
-    
-    func delete(root: CoreDataRoot) {
-        let context = container.viewContext
-        context.delete(root)
     }
     
     func delete(src: Reservation) {
@@ -74,17 +59,6 @@ class CoreDataManager {
         reservation.is_mine = is_mine
         
         return reservation
-    }
-    
-    func getCoreDataRoot() -> [CoreDataRoot] {
-        let context = container.viewContext
-        let request = NSFetchRequest<CoreDataRoot>(entityName: "CoreDataRoot")
-        do {
-            return try context.fetch(request)
-        }
-        catch {
-            fatalError()
-        }
     }
     
     func getReservations(predicate: NSPredicate?) -> [Reservation] {

@@ -2,7 +2,7 @@
 //  Reservation+CoreDataProperties.swift
 //  TestCal
 //
-//  Created by Keisuke Iba on 2020/12/19.
+//  Created by Keisuke Iba on 2020/12/21.
 //
 //
 
@@ -20,9 +20,8 @@ extension Reservation {
     @NSManaged public var date: Date?
     @NSManaged public var hour: Int16
     @NSManaged public var index: Int16
-    @NSManaged public var min: Int16
     @NSManaged public var is_mine: Bool
-    @NSManaged public var controller: CoreDataRoot?
+    @NSManaged public var min: Int16
 
 }
 

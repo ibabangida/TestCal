@@ -12,12 +12,10 @@
 		7023D0322590DCA500952B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0262590DCA400952B05 /* Assets.xcassets */; };
 		7023D0332590DCA500952B05 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0272590DCA400952B05 /* CalendarView.swift */; };
 		7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0282590DCA400952B05 /* PopoverCondition.swift */; };
-		7023D0352590DCA500952B05 /* Reservation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */; };
-		7023D0362590DCA500952B05 /* CoreDataRoot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */; };
-		7023D0372590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */; };
-		7023D0382590DCA500952B05 /* Reservation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */; };
 		7023D0392590DCA500952B05 /* BookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02D2590DCA500952B05 /* BookButton.swift */; };
 		7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */; };
+		7023D0532590DDC100952B05 /* Reservation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */; };
+		7023D0542590DDC100952B05 /* Reservation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */; };
 		7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034A20B255FC5690024EF55 /* WeekDataManager.swift */; };
 		70AB6E18254572B2008B458A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AB6E17254572B2008B458A /* App.plist */; };
 		70FC77432557788400F055CE /* MonthDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77422557788400F055CE /* MonthDataManger.swift */; };
@@ -52,12 +50,10 @@
 		7023D0262590DCA400952B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7023D0272590DCA400952B05 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7023D0282590DCA400952B05 /* PopoverCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCondition.swift; sourceTree = "<group>"; };
-		7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRoot+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataRoot+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7023D02D2590DCA500952B05 /* BookButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookButton.swift; sourceTree = "<group>"; };
 		7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7034A20B255FC5690024EF55 /* WeekDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataManager.swift; sourceTree = "<group>"; };
 		70AB6E17254572B2008B458A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		70FC77422557788400F055CE /* MonthDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDataManger.swift; sourceTree = "<group>"; };
@@ -119,13 +115,11 @@
 				7023D0272590DCA400952B05 /* CalendarView.swift */,
 				CE5E62812540666C00669091 /* ContentView.swift */,
 				7023D0242590DCA400952B05 /* CoreDataManager.swift */,
-				7023D02A2590DCA400952B05 /* CoreDataRoot+CoreDataClass.swift */,
-				7023D02B2590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift */,
 				CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */,
 				70FC77422557788400F055CE /* MonthDataManger.swift */,
 				7023D0282590DCA400952B05 /* PopoverCondition.swift */,
-				7023D0292590DCA400952B05 /* Reservation+CoreDataClass.swift */,
-				7023D02C2590DCA500952B05 /* Reservation+CoreDataProperties.swift */,
+				7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */,
+				7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */,
 				CE5E627F2540666C00669091 /* TestCalApp.swift */,
 				7034A20B255FC5690024EF55 /* WeekDataManager.swift */,
 				7023D0262590DCA400952B05 /* Assets.xcassets */,
@@ -292,20 +286,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7023D0362590DCA500952B05 /* CoreDataRoot+CoreDataClass.swift in Sources */,
 				7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */,
 				7023D0332590DCA500952B05 /* CalendarView.swift in Sources */,
-				7023D0352590DCA500952B05 /* Reservation+CoreDataClass.swift in Sources */,
+				7023D0532590DDC100952B05 /* Reservation+CoreDataClass.swift in Sources */,
 				7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */,
 				7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */,
 				CE5E62AE254067A100669091 /* DefaultWorkScheduleLoader.swift in Sources */,
 				7023D0392590DCA500952B05 /* BookButton.swift in Sources */,
 				70FC77432557788400F055CE /* MonthDataManger.swift in Sources */,
-				7023D0382590DCA500952B05 /* Reservation+CoreDataProperties.swift in Sources */,
+				7023D0542590DDC100952B05 /* Reservation+CoreDataProperties.swift in Sources */,
 				CE5E62822540666C00669091 /* ContentView.swift in Sources */,
 				CE5E62802540666C00669091 /* TestCalApp.swift in Sources */,
 				7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */,
-				7023D0372590DCA500952B05 /* CoreDataRoot+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
