@@ -58,7 +58,7 @@ class MonthDataManger  {
     
     // get view
     func getView() -> some View {
-        return DayView(dates: dates, year: year, month: month)
+        return CalendarView(dates: dates, year: year, month: month)
     }
     
     func getYear() -> Int {

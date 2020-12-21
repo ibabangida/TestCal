@@ -20,8 +20,7 @@ struct BookButton: View {
     @State private var hour_index: Int = 1
     @State private var min_index: Int = 1
     @State private var is_mine: Bool = true
-    @State private var has_save: Bool = false
-    @State private var reservation: Optional<Reservation> = nil
+    @State private var core_data_manager = CoreDataManager.shared
     @EnvironmentObject private var popover_condition: PopoverCondition
     
     init(date: Date, category: String, save_index: Int, index: Int, shift: Shift) {
@@ -31,15 +30,15 @@ struct BookButton: View {
         self.index = index
         self.shift = shift
         self.hour_strs = [(shift.hour - 1).description, shift.hour.description, (shift.hour + 1).description]
-        
-        self._reservation = State(initialValue: CoreDataManager.shared.getReservation(date: date, category: category, index: save_index))
-        
-        if reservation != nil {
-            self._has_save = State(initialValue: true)
-        }
+    }
+    
+    private func hasSave() -> Bool {
+        let reservation = core_data_manager.getReservation(date: date, category: category, index: save_index)
+        return reservation != nil
     }
     
     private func getTimeText() -> String {
+        let reservation = core_data_manager.getReservation(date: date, category: category, index: save_index)
         if reservation == nil {
             return shift.getTimeText()
         }
@@ -49,7 +48,9 @@ struct BookButton: View {
         return (hour < 10 ? "0" : "") + hour.description + ":" + (min < 10 ? "0" : "") + min.description
     }
     
-    private func setTimeIndex() {
+    private func initPopover() {
+        let reservation = core_data_manager.getReservation(date: date, category: category, index: save_index)
+        
         let hour = reservation == nil ? shift.hour : Int(reservation!.hour)
         let min = reservation == nil ? shift.min : Int(reservation!.min)
         
@@ -64,28 +65,31 @@ struct BookButton: View {
         } else {
             min_index = 0
         }
+        
+        is_mine = reservation == nil ? true : reservation!.is_mine
     }
     
     private func deleteReservation() {
+        let reservation = core_data_manager.getReservation(date: date, category: category, index: save_index)
         if reservation != nil {
-            CoreDataManager.shared.delete(src: reservation!)
+            core_data_manager.delete(src: reservation!)
         }
     }
     
     private func addReservation() {
         let hour = Int(hour_strs[hour_index])!
         let min = min_index == 0 ? 0 : Int(BookButton.min_strs[min_index])!
-        reservation = CoreDataManager.shared.addReservation(date: date, category: category, index: save_index, hour: hour, min: min, is_mine: is_mine)
+        _ = core_data_manager.addReservation(date: date, category: category, index: save_index, hour: hour, min: min, is_mine: is_mine)
     }
     
     var body : some View {
         Button(action: {
             if popover_condition.enablePush(index: index) {
-                setTimeIndex()
+                initPopover()
                 popover_condition.conditions[index].toggle()
             }
         }, label: {
-            if has_save {
+            if hasSave() {
                 Text(getTimeText()).strikethrough()
             } else {
                 Text(getTimeText())
@@ -133,12 +137,11 @@ struct BookButton: View {
                     
                     Button(action: {
                         deleteReservation()
-                        CoreDataManager.shared.save()
-                        has_save = false
+                        core_data_manager.save()
                     }, label: {
                         Text("Delete").font(.title3)
                     })
-                    .disabled(!has_save)
+                    .disabled(!hasSave())
                     
                     Spacer()
                     Divider()
@@ -147,8 +150,8 @@ struct BookButton: View {
                     Button(action: {
                         deleteReservation()
                         addReservation()
-                        CoreDataManager.shared.save()
-                        has_save = true
+                        core_data_manager.save()
+                        popover_condition.conditions[index].toggle()
                     }, label: {
                         Text("Save").font(.title3)
                     })

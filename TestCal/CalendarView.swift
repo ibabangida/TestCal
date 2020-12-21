@@ -1,5 +1,5 @@
 //
-//  DayView.swift
+//  CalendarView.swift
 //  TestCal
 //
 //  Created by Keisuke Iba on 2020/12/17.
@@ -8,15 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct DayView : View {
+struct CalendarView : View {
     private let dates : [Date]
     private let year: Int
     private let month: Int
     private static let shift_type = ["A", "B"]
     private var save: Reservation?
     @EnvironmentObject var popover_condition: PopoverCondition
-    
-    @State var show_popover = [Bool](repeating: false, count: 42)
     
     init(dates: [Date], year: Int, month: Int) {
         self.dates = dates
@@ -42,14 +40,14 @@ struct DayView : View {
                 let calendar = Calendar(identifier: .gregorian)
                 
                 ForEach(0..<dates.count) { i in
-                    let d = calendar.component(.day, from: self.dates[i])
-                    let m = calendar.component(.month, from: self.dates[i])
+                    let d = calendar.component(.day, from: dates[i])
+                    let m = calendar.component(.month, from: dates[i])
                     
                     let today = Date()
                     let today_d = calendar.component(.day, from: today)
                     let today_m = calendar.component(.month, from: today)
                     
-                    let is_target_month = self.month == m
+                    let is_target_month = month == m
                     let is_today = today_d == d && today_m == m
                     
                     VStack {
@@ -67,14 +65,14 @@ struct DayView : View {
                         }
                         
                         HStack {
-                            ForEach(DayView.shift_type.indices) { j in
-                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: DayView.shift_type[j])
+                            ForEach(CalendarView.shift_type.indices) { j in
+                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: CalendarView.shift_type[j])
                                 
                                 VStack {
                                     ForEach(shifts.indices) { k in
-                                        let index = i * DayView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
+                                        let index = i * CalendarView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
                                         
-                                        BookButton(date: self.dates[i], category: DayView.shift_type[j], save_index: k, index: index, shift: shifts[k])
+                                        BookButton(date: dates[i], category: CalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
                                     }
                                 }
                             }
