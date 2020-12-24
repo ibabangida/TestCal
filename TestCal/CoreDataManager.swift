@@ -8,6 +8,10 @@
 import Foundation
 import CoreData
 
+extension Notification.Name {
+    static let save = Notification.Name("save")
+}
+
 class CoreDataManager {
     static let shared = CoreDataManager()
     private var container : NSPersistentCloudKitContainer
@@ -29,6 +33,7 @@ class CoreDataManager {
         if context.hasChanges {
             do {
                 try context.save()
+                NotificationCenter.default.post(name: .save, object: nil)
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")

@@ -5,18 +5,33 @@
 //  Created by Keisuke Iba on 2020/11/08.
 //
 
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @State private var core_data_manager = CoreDataManager.shared
     @State private var selected_mode = 0
     @State private var year: Int = Calendar(identifier: .gregorian).component(.year, from: Date())
     @State private var month: Int = Calendar(identifier: .gregorian).component(.month, from: Date())
+    
+    @ObservedObject private var show_reservation_week = ShowReservation()
+    @ObservedObject private var show_reservation_month = ShowReservation()
     
     private var month_data_manager = MonthDataManger()
     private var week_data_manager = WeekDataManger()
     
     init() {
+        updateShowReservation()
+    }
+    
+    private func updateShowReservation() {
+        let calendar = Calendar(identifier: .gregorian)
+        let start_date_week = week_data_manager.getStartDate()
+        let start_date_month = month_data_manager.getStartDate()
+        let end_date_week = calendar.date(byAdding: .day, value: 7, to: start_date_week)!
+        let end_date_month = calendar.date(byAdding: .month, value: 1, to: start_date_month)!
+        
+        show_reservation_week.updateDuration(start_date: start_date_week, end_date: end_date_week)
+        show_reservation_month.updateDuration(start_date: start_date_month, end_date: end_date_month)
     }
     
     private func toNextMonth() {
@@ -77,34 +92,17 @@ struct ContentView: View {
     
     private func toNext() {
         selected_mode == 0 ? toNextMonth() : toNextWeek()
+        updateShowReservation()
     }
     
     private func toPrev() {
         selected_mode == 0 ? toPrevMonth() : toPrevWeek()
+        updateShowReservation()
     }
     
     private func toCurr() {
         selected_mode == 0 ? toCurrMonth() : toCurrWeek()
-    }
-    
-    private func getBookingNum() -> Int {
-        let predicate = core_data_manager.generatePredicate(start_date: getStartDate(), end_date: getEndDate())
-        
-        return core_data_manager.getReservations(predicate: predicate).count
-    }
-    
-    private func getVacancyNum() -> Int {
-        let start_date = getStartDate()
-        let end_date = getEndDate()
-        let day_num = Int(DateInterval(start: start_date, end: end_date).duration / (60 * 60 * 24))
-        
-        return day_num * DefaultWorkScheduleLoader.shared.getShiftPatternNum() - getBookingNum()
-    }
-    
-    private func getMineNum() -> Int {
-        let predicate = core_data_manager.generatePredicate(start_date: getStartDate(), end_date: getEndDate(), is_mine: true)
-        
-        return core_data_manager.getReservations(predicate: predicate).count
+        updateShowReservation()
     }
     
     private func getStartDate() -> Date {
@@ -136,18 +134,10 @@ struct ContentView: View {
                     Text(self.year.description + " / " + self.month.description).font(.largeTitle)
                     
                     Text("")
-                    
-                    VStack {
-                        HStack {
-                            Text("Booked(Mine)").font(.subheadline)
-                            Spacer()
-                            Text(getBookingNum().description + "(" + getMineNum().description + ")")
-                        }
-                        HStack {
-                            Text("Vacant").font(.subheadline)
-                            Spacer()
-                            Text(getVacancyNum().description)
-                        }
+                    if (selected_mode == 0) {
+                        show_reservation_month.getView()
+                    } else {
+                        show_reservation_week.getView()
                     }
                     
                     HStack {
