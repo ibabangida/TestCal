@@ -13,7 +13,6 @@ struct CalendarView : View {
     private let year: Int
     private let month: Int
     private static let shift_type = ["A", "B"]
-    private var save: Reservation?
     @EnvironmentObject var popover_condition: PopoverCondition
     
     init(dates: [Date], year: Int, month: Int) {
@@ -76,7 +75,6 @@ struct CalendarView : View {
                                     }
                                 }
                             }
-                            
                         }
                     }
                     .background(Color(UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)))

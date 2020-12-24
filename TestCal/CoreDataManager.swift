@@ -21,7 +21,7 @@ class CoreDataManager {
         })
         
         // delete for test
-        //deleteAll()
+        // deleteAll()
     }
     
     func save() {
@@ -75,7 +75,7 @@ class CoreDataManager {
     }
     
     func getReservation(date: Date, category: String, index: Int) -> Reservation? {
-        let predicate = NSPredicate(format: "date == %@ AND category == %@ AND index == %@", argumentArray: [date as NSDate, category, index])
+        let predicate = generatePredicate(date: date, category: category, index: index)
         let result = getReservations(predicate: predicate)
         
         // check duplicated save data
@@ -84,5 +84,38 @@ class CoreDataManager {
         }
         
         return result.isEmpty ? nil : result[0]
+    }
+    
+    func addPredicateArg(format: inout String, args: inout Array<Any>, name: String, val: Any?, operator_str: String = "==") {
+        if val == nil {
+            return
+        }
+        
+        args.append(type(of: val!) == Date.self ? val! as! NSDate : val!)
+        if format.isEmpty {
+            format.append(name + operator_str + "%@")
+        } else {
+            format.append(" AND " + name + operator_str + "%@")
+        }
+    }
+    
+    func generatePredicate(date: Date? = nil, start_date: Date? = nil, end_date: Date? = nil, category: String? = nil, index: Int? = nil, is_mine: Bool? = nil) -> NSPredicate {
+        
+        // check invalid date setting
+        if (date != nil && start_date != nil || date != nil && end_date != nil) {
+            fatalError()
+        }
+        
+        var format = ""
+        var args: Array<Any> = []
+        
+        addPredicateArg(format: &format, args: &args, name: "date", val: date)
+        addPredicateArg(format: &format, args: &args, name: "date", val: start_date, operator_str: ">")
+        addPredicateArg(format: &format, args: &args, name: "date", val: end_date, operator_str: "<")
+        addPredicateArg(format: &format, args: &args, name: "category", val: category)
+        addPredicateArg(format: &format, args: &args, name: "index", val: index)
+        addPredicateArg(format: &format, args: &args, name: "is_mine", val: is_mine)
+        
+        return NSPredicate(format: format, argumentArray: args)
     }
 }

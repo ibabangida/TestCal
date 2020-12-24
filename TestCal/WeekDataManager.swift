@@ -11,7 +11,7 @@ import SwiftUI
 class WeekDataManger {
     private var year: Int
     private var month: Int
-    private var target_date: Date
+    private var start_date: Date
     private var dates: [Date] = []
  
     init() {
@@ -22,7 +22,7 @@ class WeekDataManger {
         
         self.year = year
         self.month = month
-        self.target_date = calendar.date(from: DateComponents(year: year, month: month, day: 1))!
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
         
         reload()
     }
@@ -34,32 +34,32 @@ class WeekDataManger {
         
         // init value
         let calendar = Calendar(identifier: .gregorian)
-        self.year = calendar.component(.year, from: target_date)
-        self.month = calendar.component(.month, from: target_date)
+        self.year = calendar.component(.year, from: start_date)
+        self.month = calendar.component(.month, from: start_date)
         
         // set calendar
-        let index = calendar.component(.weekday, from: target_date) - 1
+        let index = calendar.component(.weekday, from: start_date) - 1
         for i in 0..<7 {
-            let date = Calendar(identifier: .gregorian).date(byAdding: .day, value: i - index, to: target_date)!
+            let date = Calendar(identifier: .gregorian).date(byAdding: .day, value: i - index, to: start_date)!
             dates.append(date)
         }
     }
     
     // reload next week
     func reloadNextWeek() {
-        target_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: 7, to: target_date)!
+        start_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: 7, to: start_date)!
         reload()
     }
     
     // reload next week
     func reloadPrevWeek() {
-        target_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: -7, to: target_date)!
+        start_date = Calendar(identifier: .gregorian).date(byAdding: .day, value: -7, to: start_date)!
         reload()
     }
     
     // reload current month
     func reloadCurrWeek() {
-        target_date = Date()
+        start_date = Date()
         reload()
     }
     
@@ -68,7 +68,7 @@ class WeekDataManger {
         let calendar = Calendar(identifier: .gregorian)
         self.year = year
         self.month = month
-        self.target_date = calendar.date(from: DateComponents(year: year, month: month, day: 1))!
+        self.start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
         
         reload()
     }
@@ -112,10 +112,14 @@ class WeekDataManger {
     }
     
     func getYear() -> Int {
-        return self.year
+        return year
     }
     
     func getMonth() -> Int {
-        return self.month
+        return month
+    }
+    
+    func getStartDate() -> Date {
+        return start_date
     }
 }

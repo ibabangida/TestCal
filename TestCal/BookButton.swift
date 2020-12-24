@@ -138,6 +138,7 @@ struct BookButton: View {
                     Button(action: {
                         deleteReservation()
                         core_data_manager.save()
+                        popover_condition.conditions[index].toggle()
                     }, label: {
                         Text("Delete").font(.title3)
                     })

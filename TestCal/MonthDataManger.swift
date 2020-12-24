@@ -12,6 +12,7 @@ class MonthDataManger  {
     private var year: Int
     private var month: Int
     private var dates: [Date] = []
+    private var start_date: Date
     
     // initialize based on today
     init() {
@@ -19,30 +20,35 @@ class MonthDataManger  {
         let calendar = Calendar(identifier: .gregorian)
         year = calendar.component(.year, from: today)
         month = calendar.component(.month, from: today)
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
+        
         reload(year: self.year, month: self.month)
    }
     
     // initialize with year and month
     init(year: Int, month: Int) {
+        let calendar = Calendar(identifier: .gregorian)
         self.year  = year
         self.month = month
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
+        
         reload(year: year, month: month)
     }
 
     // reload
     func reload(year: Int, month: Int) {
+        let calendar = Calendar(identifier: .gregorian)
         self.year  = year
         self.month = month
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
         
         // delete previous data
         dates.removeAll()
         
         // set calendar(7*6)
-        let calendar = Calendar(identifier: .gregorian)
-        let first_date = calendar.date(from: DateComponents(year: year, month: month, day: 1))!
-        let index = calendar.component(.weekday, from: first_date) - 1
+        let index = calendar.component(.weekday, from: start_date) - 1
         for i in 0..<42 {
-            let date = Calendar(identifier: .gregorian).date(byAdding: .day, value: i - index, to: first_date)!
+            let date = Calendar(identifier: .gregorian).date(byAdding: .day, value: i - index, to: start_date)!
             dates.append(date)
         }
     }
@@ -62,10 +68,14 @@ class MonthDataManger  {
     }
     
     func getYear() -> Int {
-        return self.year
+        return year
     }
     
     func getMonth() -> Int {
-        return self.month
+        return month
+    }
+    
+    func getStartDate() -> Date {
+        return start_date
     }
 }
