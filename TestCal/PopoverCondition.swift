@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 class PopoverCondition : ObservableObject {
     @Published var conditions: [Bool] =

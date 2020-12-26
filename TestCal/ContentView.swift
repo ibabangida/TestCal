@@ -13,25 +13,25 @@ struct ContentView: View {
     @State private var year: Int = Calendar(identifier: .gregorian).component(.year, from: Date())
     @State private var month: Int = Calendar(identifier: .gregorian).component(.month, from: Date())
     
-    @ObservedObject private var show_reservation_week = ShowReservation()
-    @ObservedObject private var show_reservation_month = ShowReservation()
+    @ObservedObject private var reservation_info_week = ReservationInfo()
+    @ObservedObject private var reservation_info_month = ReservationInfo()
     
     private var month_data_manager = MonthDataManger()
     private var week_data_manager = WeekDataManger()
     
     init() {
-        updateShowReservation()
+        updateReservationInfo()
     }
     
-    private func updateShowReservation() {
+    private func updateReservationInfo() {
         let calendar = Calendar(identifier: .gregorian)
         let start_date_week = week_data_manager.getStartDate()
         let start_date_month = month_data_manager.getStartDate()
         let end_date_week = calendar.date(byAdding: .day, value: 7, to: start_date_week)!
         let end_date_month = calendar.date(byAdding: .month, value: 1, to: start_date_month)!
         
-        show_reservation_week.updateDuration(start_date: start_date_week, end_date: end_date_week)
-        show_reservation_month.updateDuration(start_date: start_date_month, end_date: end_date_month)
+        reservation_info_week.updateDuration(start_date: start_date_week, end_date: end_date_week)
+        reservation_info_month.updateDuration(start_date: start_date_month, end_date: end_date_month)
     }
     
     private func toNextMonth() {
@@ -92,17 +92,17 @@ struct ContentView: View {
     
     private func toNext() {
         selected_mode == 0 ? toNextMonth() : toNextWeek()
-        updateShowReservation()
+        updateReservationInfo()
     }
     
     private func toPrev() {
         selected_mode == 0 ? toPrevMonth() : toPrevWeek()
-        updateShowReservation()
+        updateReservationInfo()
     }
     
     private func toCurr() {
         selected_mode == 0 ? toCurrMonth() : toCurrWeek()
-        updateShowReservation()
+        updateReservationInfo()
     }
     
     private func getStartDate() -> Date {
@@ -131,15 +131,28 @@ struct ContentView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 4)) {
+                    // year, month
                     Text(self.year.description + " / " + self.month.description).font(.largeTitle)
                     
+                    // brank
                     Text("")
-                    if (selected_mode == 0) {
-                        show_reservation_month.getView()
-                    } else {
-                        show_reservation_week.getView()
+                    
+                    // booking info
+                    let reservation_info = selected_mode == 0 ? reservation_info_month : reservation_info_week
+                    VStack {
+                        HStack {
+                            Text("Booked(Mine)").font(.subheadline)
+                            Spacer()
+                            Text(reservation_info.getBookingNum().description + "(" + reservation_info.getMineNum().description + ")")
+                        }
+                        HStack {
+                            Text("Vacant").font(.subheadline)
+                            Spacer()
+                            Text(reservation_info.getVacancyNum().description)
+                        }
                     }
                     
+                    // controller
                     HStack {
                         Spacer()
                         Button(action: {toPrev()}, label: {Text("<")})
@@ -153,7 +166,7 @@ struct ContentView: View {
             }
             
             if (selected_mode == 0) {
-                month_data_manager.getView()
+                CalendarView(dates: month_data_manager.getDates(), year: month_data_manager.getYear(), month: month_data_manager.getMonth())
             } else {
                 week_data_manager.getView()
             }

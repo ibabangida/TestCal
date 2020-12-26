@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 class MonthDataManger  {
     private var year: Int
@@ -62,9 +61,8 @@ class MonthDataManger  {
         reload(year: year, month: month)
     }
     
-    // get view
-    func getView() -> some View {
-        return CalendarView(dates: dates, year: year, month: month)
+    func getDates() -> [Date] {
+        return dates
     }
     
     func getYear() -> Int {

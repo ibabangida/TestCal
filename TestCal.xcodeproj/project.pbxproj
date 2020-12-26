@@ -12,12 +12,13 @@
 		7023D0322590DCA500952B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0262590DCA400952B05 /* Assets.xcassets */; };
 		7023D0332590DCA500952B05 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0272590DCA400952B05 /* CalendarView.swift */; };
 		7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0282590DCA400952B05 /* PopoverCondition.swift */; };
-		7023D0392590DCA500952B05 /* BookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02D2590DCA500952B05 /* BookButton.swift */; };
+		7023D0392590DCA500952B05 /* BookButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02D2590DCA500952B05 /* BookButtonView.swift */; };
 		7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */; };
 		7023D0532590DDC100952B05 /* Reservation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */; };
 		7023D0542590DDC100952B05 /* Reservation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */; };
-		7023D06425943D1500952B05 /* ShowReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D06325943D1500952B05 /* ShowReservation.swift */; };
+		7023D06425943D1500952B05 /* ReservationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D06325943D1500952B05 /* ReservationInfo.swift */; };
 		7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034A20B255FC5690024EF55 /* WeekDataManager.swift */; };
+		705774062596C01A002AFAE1 /* BookDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705774052596C01A002AFAE1 /* BookDataController.swift */; };
 		70AB6E18254572B2008B458A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AB6E17254572B2008B458A /* App.plist */; };
 		70FC77432557788400F055CE /* MonthDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77422557788400F055CE /* MonthDataManger.swift */; };
 		CE5E62802540666C00669091 /* TestCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E627F2540666C00669091 /* TestCalApp.swift */; };
@@ -51,23 +52,24 @@
 		7023D0262590DCA400952B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7023D0272590DCA400952B05 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7023D0282590DCA400952B05 /* PopoverCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCondition.swift; sourceTree = "<group>"; };
-		7023D02D2590DCA500952B05 /* BookButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookButton.swift; sourceTree = "<group>"; };
+		7023D02D2590DCA500952B05 /* BookButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookButtonView.swift; sourceTree = "<group>"; };
 		7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservation+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7023D06325943D1500952B05 /* ShowReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReservation.swift; sourceTree = "<group>"; };
+		7023D06325943D1500952B05 /* ReservationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfo.swift; sourceTree = "<group>"; };
+		702B77CF25955054005FACC2 /* TestCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7034A20B255FC5690024EF55 /* WeekDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDataManager.swift; sourceTree = "<group>"; };
+		705774032596BFAF002AFAE1 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		705774042596BFAF002AFAE1 /* TestCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		705774052596C01A002AFAE1 /* BookDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataController.swift; sourceTree = "<group>"; };
 		70AB6E17254572B2008B458A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		70FC77422557788400F055CE /* MonthDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDataManger.swift; sourceTree = "<group>"; };
-		CE5E627C2540666C00669091 /* TestCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TestCal.app; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCal.app"; sourceTree = "<absolute>"; };
 		CE5E627F2540666C00669091 /* TestCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalApp.swift; sourceTree = "<group>"; };
 		CE5E62812540666C00669091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE5E62862540667500669091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE5E62882540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5E628D2540667500669091 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TestCalTests.xctest; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCalTests.xctest"; sourceTree = "<absolute>"; };
 		CE5E62912540667500669091 /* TestCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalTests.swift; sourceTree = "<group>"; };
 		CE5E62932540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5E62982540667500669091 /* TestCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TestCalUITests.xctest; path = "/Users/ibabangida/Documents/Program/Ahart/TestCal/build/Debug-iphoneos/TestCalUITests.xctest"; sourceTree = "<absolute>"; };
 		CE5E629C2540667500669091 /* TestCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalUITests.swift; sourceTree = "<group>"; };
 		CE5E629E2540667500669091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWorkScheduleLoader.swift; sourceTree = "<group>"; };
@@ -104,6 +106,9 @@
 				CE5E627E2540666C00669091 /* TestCal */,
 				CE5E62902540667500669091 /* TestCalTests */,
 				CE5E629B2540667500669091 /* TestCalUITests */,
+				702B77CF25955054005FACC2 /* TestCal.app */,
+				705774032596BFAF002AFAE1 /* TestCalTests.xctest */,
+				705774042596BFAF002AFAE1 /* TestCalUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,10 +118,11 @@
 				7023D0252590DCA400952B05 /* Preview Content */,
 				70AB6E17254572B2008B458A /* App.plist */,
 				CE5E62882540667500669091 /* Info.plist */,
-				7023D02D2590DCA500952B05 /* BookButton.swift */,
+				7023D02D2590DCA500952B05 /* BookButtonView.swift */,
+				705774052596C01A002AFAE1 /* BookDataController.swift */,
 				7023D0272590DCA400952B05 /* CalendarView.swift */,
 				CE5E62812540666C00669091 /* ContentView.swift */,
-				7023D06325943D1500952B05 /* ShowReservation.swift */,
+				7023D06325943D1500952B05 /* ReservationInfo.swift */,
 				7023D0242590DCA400952B05 /* CoreDataManager.swift */,
 				CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */,
 				70FC77422557788400F055CE /* MonthDataManger.swift */,
@@ -175,7 +181,7 @@
 			);
 			name = TestCal;
 			productName = MenardCal;
-			productReference = CE5E627C2540666C00669091 /* TestCal.app */;
+			productReference = 702B77CF25955054005FACC2 /* TestCal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CE5E628C2540667500669091 /* TestCalTests */ = {
@@ -193,7 +199,7 @@
 			);
 			name = TestCalTests;
 			productName = MenardCalTests;
-			productReference = CE5E628D2540667500669091 /* TestCalTests.xctest */;
+			productReference = 705774032596BFAF002AFAE1 /* TestCalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CE5E62972540667500669091 /* TestCalUITests */ = {
@@ -211,7 +217,7 @@
 			);
 			name = TestCalUITests;
 			productName = MenardCalUITests;
-			productReference = CE5E62982540667500669091 /* TestCalUITests.xctest */;
+			productReference = 705774042596BFAF002AFAE1 /* TestCalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -290,13 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */,
-				7023D06425943D1500952B05 /* ShowReservation.swift in Sources */,
+				7023D06425943D1500952B05 /* ReservationInfo.swift in Sources */,
+				705774062596C01A002AFAE1 /* BookDataController.swift in Sources */,
 				7023D0332590DCA500952B05 /* CalendarView.swift in Sources */,
 				7023D0532590DDC100952B05 /* Reservation+CoreDataClass.swift in Sources */,
 				7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */,
 				7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */,
 				CE5E62AE254067A100669091 /* DefaultWorkScheduleLoader.swift in Sources */,
-				7023D0392590DCA500952B05 /* BookButton.swift in Sources */,
+				7023D0392590DCA500952B05 /* BookButtonView.swift in Sources */,
 				70FC77432557788400F055CE /* MonthDataManger.swift in Sources */,
 				7023D0542590DDC100952B05 /* Reservation+CoreDataProperties.swift in Sources */,
 				CE5E62822540666C00669091 /* ContentView.swift in Sources */,

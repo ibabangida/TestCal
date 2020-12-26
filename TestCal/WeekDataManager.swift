@@ -13,7 +13,10 @@ class WeekDataManger {
     private var month: Int
     private var start_date: Date
     private var dates: [Date] = []
- 
+    private var min_hour: Int?
+    private var max_hour: Int?
+    private static let shift_type = ["A", "B"]
+    
     init() {
         let today = Date()
         let calendar = Calendar(identifier: .gregorian)
@@ -23,6 +26,25 @@ class WeekDataManger {
         self.year = year
         self.month = month
         start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
+        
+        for type in WeekDataManger.shift_type {
+            let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: type)
+            for shift in shifts {
+                if min_hour == nil {
+                    min_hour = shift.hour
+                } else if shift.hour < min_hour! {
+                    min_hour = shift.hour
+                }
+                
+                if max_hour == nil {
+                    max_hour = shift.hour
+                } else if shift.hour > max_hour! {
+                    max_hour = shift.hour
+                }
+            }
+        }
+        min_hour! -= 2
+        max_hour! += 2
         
         reload()
     }
@@ -77,38 +99,102 @@ class WeekDataManger {
     func getView() -> some View {
         let calendar = Calendar(identifier: .gregorian)
         
-        return LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 7)) {
-            ForEach(0..<7) { i in
-                let d = calendar.component(.day, from: self.dates[i])
-                let m = calendar.component(.month, from: self.dates[i])
-                
-                let today = Date()
-                let today_d = calendar.component(.day, from: today)
-                let today_m = calendar.component(.month, from: today)
-                
-                let is_today = today_d == d && today_m == m
-                
-                if (is_today) {
-                    RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
-                        .frame(height: 50)
-                        .overlay(Circle().fill(Color.red))
-                        .overlay(VStack{
-                            Text(calendar.shortWeekdaySymbols[i])
-                            Text(calendar.component(.day, from: self.dates[i]).description)
-                        })
-                        .foregroundColor(.white)
-                } else {
-                    RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
-                        .frame(height: 50)
-                        .overlay(VStack{
-                            Text(calendar.shortWeekdaySymbols[i])
-                            Text(calendar.component(.day, from: self.dates[i]).description)
-                        })
-                        .foregroundColor(.white)
+        return
+            VStack {
+                LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
+                    Text("")
+                    ForEach(0..<7) { i in
+                        let d = calendar.component(.day, from: self.dates[i])
+                        let m = calendar.component(.month, from: self.dates[i])
+                        
+                        let today = Date()
+                        let today_d = calendar.component(.day, from: today)
+                        let today_m = calendar.component(.month, from: today)
+                        
+                        let is_today = today_d == d && today_m == m
+                        
+                        if (is_today) {
+                            RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
+                                .frame(height: 50)
+                                .overlay(Circle().fill(Color.red))
+                                .overlay(VStack{
+                                    Text(calendar.shortWeekdaySymbols[i])
+                                    Text(calendar.component(.day, from: self.dates[i]).description)
+                                })
+                                .foregroundColor(.white)
+                        } else {
+                            RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
+                                .frame(height: 50)
+                                .overlay(VStack{
+                                    Text(calendar.shortWeekdaySymbols[i])
+                                    Text(calendar.component(.day, from: self.dates[i]).description)
+                                })
+                                .foregroundColor(.white)
+                        }
+                    }
                 }
+                .padding(3.0)
+                
+                LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
+                    VStack(spacing: 0) {
+                        ForEach(min_hour! ..< max_hour! + 1) { i in
+                            Text(i.description).frame(height: 60)
+                        }
+                    }
+                    
+                    VStack(spacing: 0) {
+                        ForEach(min_hour! ..< max_hour! + 1) { i in
+                            Rectangle().fill(Color.blue).frame(height:60)
+                        }
+                    }
+                    
+                    VStack(spacing: 1) {
+                        ForEach(min_hour! ..< max_hour! + 1) { i in
+                            Button(action: {
+                            }, label: {
+                                Rectangle().fill(Color.blue).frame(height:60)
+                            })
+                        }
+                    }
+                    
+                    VStack(spacing: 0) {
+                        ForEach(min_hour! ..< max_hour! + 1) { i in
+                            Button(action: {
+                            }, label: {
+                                Rectangle().strokeBorder(Color.black).frame(height:60)
+                            })
+                        }
+                    }
+                    
+                    
+                    VStack(spacing: 0) {
+                        ForEach(min_hour! ..< max_hour! + 1) { i in
+                            Button(action: {
+                            }, label: {
+                                Rectangle().stroke(Color.black).frame(height:60)
+                            })
+                        }
+                    }
+                }
+                
+                /*
+                VStack(spacing: 0) {
+                    ForEach(min_hour! ..< max_hour! + 1) { i in
+                        LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
+                            Text(i.description)
+                            
+                            ForEach(0 ..< 7) { j in
+                                VStack(spacing: 0) {
+                                    ForEach(0 ..< 2) { k in
+                                        Rectangle().fill(Color.blue).frame(width:10, height: 25)
+                                    }
+                                }
+                            }
+                        }.padding(0)
+                    }
+                }
+                 */
             }
-        }
-        .padding(3.0)
     }
     
     func getYear() -> Int {

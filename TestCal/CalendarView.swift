@@ -71,7 +71,7 @@ struct CalendarView : View {
                                     ForEach(shifts.indices) { k in
                                         let index = i * CalendarView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
                                         
-                                        BookButton(date: dates[i], category: CalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
+                                        BookButtonView(date: dates[i], category: CalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
                                     }
                                 }
                             }
