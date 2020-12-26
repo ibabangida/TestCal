@@ -166,9 +166,9 @@ struct ContentView: View {
             }
             
             if (selected_mode == 0) {
-                CalendarView(dates: month_data_manager.getDates(), year: month_data_manager.getYear(), month: month_data_manager.getMonth())
+                MonthlyCalendarView(dates: month_data_manager.getDates(), month: month_data_manager.getMonth())
             } else {
-                week_data_manager.getView()
+                WeeklyCalendarView(dates: week_data_manager.getDates())
             }
             
             Spacer()

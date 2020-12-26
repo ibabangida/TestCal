@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 class WeekDataManger {
     private var year: Int
@@ -95,106 +94,8 @@ class WeekDataManger {
         reload()
     }
     
-    // get view
-    func getView() -> some View {
-        let calendar = Calendar(identifier: .gregorian)
-        
-        return
-            VStack {
-                LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
-                    Text("")
-                    ForEach(0..<7) { i in
-                        let d = calendar.component(.day, from: self.dates[i])
-                        let m = calendar.component(.month, from: self.dates[i])
-                        
-                        let today = Date()
-                        let today_d = calendar.component(.day, from: today)
-                        let today_m = calendar.component(.month, from: today)
-                        
-                        let is_today = today_d == d && today_m == m
-                        
-                        if (is_today) {
-                            RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
-                                .frame(height: 50)
-                                .overlay(Circle().fill(Color.red))
-                                .overlay(VStack{
-                                    Text(calendar.shortWeekdaySymbols[i])
-                                    Text(calendar.component(.day, from: self.dates[i]).description)
-                                })
-                                .foregroundColor(.white)
-                        } else {
-                            RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
-                                .frame(height: 50)
-                                .overlay(VStack{
-                                    Text(calendar.shortWeekdaySymbols[i])
-                                    Text(calendar.component(.day, from: self.dates[i]).description)
-                                })
-                                .foregroundColor(.white)
-                        }
-                    }
-                }
-                .padding(3.0)
-                
-                LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
-                    VStack(spacing: 0) {
-                        ForEach(min_hour! ..< max_hour! + 1) { i in
-                            Text(i.description).frame(height: 60)
-                        }
-                    }
-                    
-                    VStack(spacing: 0) {
-                        ForEach(min_hour! ..< max_hour! + 1) { i in
-                            Rectangle().fill(Color.blue).frame(height:60)
-                        }
-                    }
-                    
-                    VStack(spacing: 1) {
-                        ForEach(min_hour! ..< max_hour! + 1) { i in
-                            Button(action: {
-                            }, label: {
-                                Rectangle().fill(Color.blue).frame(height:60)
-                            })
-                        }
-                    }
-                    
-                    VStack(spacing: 0) {
-                        ForEach(min_hour! ..< max_hour! + 1) { i in
-                            Button(action: {
-                            }, label: {
-                                Rectangle().strokeBorder(Color.black).frame(height:60)
-                            })
-                        }
-                    }
-                    
-                    
-                    VStack(spacing: 0) {
-                        ForEach(min_hour! ..< max_hour! + 1) { i in
-                            Button(action: {
-                            }, label: {
-                                Rectangle().stroke(Color.black).frame(height:60)
-                            })
-                        }
-                    }
-                }
-                
-                /*
-                VStack(spacing: 0) {
-                    ForEach(min_hour! ..< max_hour! + 1) { i in
-                        LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
-                            Text(i.description)
-                            
-                            ForEach(0 ..< 7) { j in
-                                VStack(spacing: 0) {
-                                    ForEach(0 ..< 2) { k in
-                                        Rectangle().fill(Color.blue).frame(width:10, height: 25)
-                                    }
-                                }
-                            }
-                        }.padding(0)
-                    }
-                }
-                 */
-            }
+    func getDates() -> [Date] {
+        return dates
     }
     
     func getYear() -> Int {

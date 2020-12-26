@@ -10,7 +10,7 @@
 		7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0242590DCA400952B05 /* CoreDataManager.swift */; };
 		7023D0312590DCA500952B05 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0252590DCA400952B05 /* Preview Content */; };
 		7023D0322590DCA500952B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023D0262590DCA400952B05 /* Assets.xcassets */; };
-		7023D0332590DCA500952B05 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0272590DCA400952B05 /* CalendarView.swift */; };
+		7023D0332590DCA500952B05 /* MonthlyCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0272590DCA400952B05 /* MonthlyCalendarView.swift */; };
 		7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D0282590DCA400952B05 /* PopoverCondition.swift */; };
 		7023D0392590DCA500952B05 /* BookButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02D2590DCA500952B05 /* BookButtonView.swift */; };
 		7023D03A2590DCA500952B05 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */; };
@@ -19,6 +19,7 @@
 		7023D06425943D1500952B05 /* ReservationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023D06325943D1500952B05 /* ReservationInfo.swift */; };
 		7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7034A20B255FC5690024EF55 /* WeekDataManager.swift */; };
 		705774062596C01A002AFAE1 /* BookDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705774052596C01A002AFAE1 /* BookDataController.swift */; };
+		7057740B2596CA7C002AFAE1 /* WeeklyCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7057740A2596CA7C002AFAE1 /* WeeklyCalendarView.swift */; };
 		70AB6E18254572B2008B458A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AB6E17254572B2008B458A /* App.plist */; };
 		70FC77432557788400F055CE /* MonthDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC77422557788400F055CE /* MonthDataManger.swift */; };
 		CE5E62802540666C00669091 /* TestCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E627F2540666C00669091 /* TestCalApp.swift */; };
@@ -50,7 +51,7 @@
 		7023D0242590DCA400952B05 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7023D0252590DCA400952B05 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		7023D0262590DCA400952B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7023D0272590DCA400952B05 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		7023D0272590DCA400952B05 /* MonthlyCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyCalendarView.swift; sourceTree = "<group>"; };
 		7023D0282590DCA400952B05 /* PopoverCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCondition.swift; sourceTree = "<group>"; };
 		7023D02D2590DCA500952B05 /* BookButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookButtonView.swift; sourceTree = "<group>"; };
 		7023D02F2590DCA500952B05 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		705774032596BFAF002AFAE1 /* TestCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		705774042596BFAF002AFAE1 /* TestCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		705774052596C01A002AFAE1 /* BookDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataController.swift; sourceTree = "<group>"; };
+		7057740A2596CA7C002AFAE1 /* WeeklyCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCalendarView.swift; sourceTree = "<group>"; };
 		70AB6E17254572B2008B458A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		70FC77422557788400F055CE /* MonthDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDataManger.swift; sourceTree = "<group>"; };
 		CE5E627F2540666C00669091 /* TestCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalApp.swift; sourceTree = "<group>"; };
@@ -120,17 +122,18 @@
 				CE5E62882540667500669091 /* Info.plist */,
 				7023D02D2590DCA500952B05 /* BookButtonView.swift */,
 				705774052596C01A002AFAE1 /* BookDataController.swift */,
-				7023D0272590DCA400952B05 /* CalendarView.swift */,
 				CE5E62812540666C00669091 /* ContentView.swift */,
-				7023D06325943D1500952B05 /* ReservationInfo.swift */,
 				7023D0242590DCA400952B05 /* CoreDataManager.swift */,
 				CE5E62AD254067A100669091 /* DefaultWorkScheduleLoader.swift */,
 				70FC77422557788400F055CE /* MonthDataManger.swift */,
+				7023D0272590DCA400952B05 /* MonthlyCalendarView.swift */,
 				7023D0282590DCA400952B05 /* PopoverCondition.swift */,
 				7023D0512590DDC100952B05 /* Reservation+CoreDataClass.swift */,
 				7023D0522590DDC100952B05 /* Reservation+CoreDataProperties.swift */,
+				7023D06325943D1500952B05 /* ReservationInfo.swift */,
 				CE5E627F2540666C00669091 /* TestCalApp.swift */,
 				7034A20B255FC5690024EF55 /* WeekDataManager.swift */,
+				7057740A2596CA7C002AFAE1 /* WeeklyCalendarView.swift */,
 				7023D0262590DCA400952B05 /* Assets.xcassets */,
 				7023D02E2590DCA500952B05 /* CoreDataModel.xcdatamodeld */,
 				CE5E62852540667500669091 /* Preview Content */,
@@ -298,10 +301,11 @@
 				7023D0302590DCA500952B05 /* CoreDataManager.swift in Sources */,
 				7023D06425943D1500952B05 /* ReservationInfo.swift in Sources */,
 				705774062596C01A002AFAE1 /* BookDataController.swift in Sources */,
-				7023D0332590DCA500952B05 /* CalendarView.swift in Sources */,
+				7023D0332590DCA500952B05 /* MonthlyCalendarView.swift in Sources */,
 				7023D0532590DDC100952B05 /* Reservation+CoreDataClass.swift in Sources */,
 				7034A20C255FC5690024EF55 /* WeekDataManager.swift in Sources */,
 				7023D0342590DCA500952B05 /* PopoverCondition.swift in Sources */,
+				7057740B2596CA7C002AFAE1 /* WeeklyCalendarView.swift in Sources */,
 				CE5E62AE254067A100669091 /* DefaultWorkScheduleLoader.swift in Sources */,
 				7023D0392590DCA500952B05 /* BookButtonView.swift in Sources */,
 				70FC77432557788400F055CE /* MonthDataManger.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  CalendarView.swift
+//  MonthlyCalendarView.swift
 //  TestCal
 //
 //  Created by Keisuke Iba on 2020/12/17.
@@ -8,16 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct CalendarView : View {
+struct MonthlyCalendarView : View {
     private let dates : [Date]
-    private let year: Int
     private let month: Int
     private static let shift_type = ["A", "B"]
     @EnvironmentObject var popover_condition: PopoverCondition
     
-    init(dates: [Date], year: Int, month: Int) {
+    init(dates: [Date], month: Int) {
         self.dates = dates
-        self.year = year
         self.month = month
     }
     
@@ -37,41 +35,35 @@ struct CalendarView : View {
             
             LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 7)) {
                 let calendar = Calendar(identifier: .gregorian)
-                
+                                
                 ForEach(0..<dates.count) { i in
-                    let d = calendar.component(.day, from: dates[i])
-                    let m = calendar.component(.month, from: dates[i])
-                    
-                    let today = Date()
-                    let today_d = calendar.component(.day, from: today)
-                    let today_m = calendar.component(.month, from: today)
-                    
-                    let is_target_month = month == m
-                    let is_today = today_d == d && today_m == m
+                    let day = calendar.component(.day, from: dates[i])
+                    let is_target_month = month == calendar.component(.month, from: dates[i])
+                    let is_today = calendar.isDateInToday(dates[i])
                     
                     VStack {
                         if (is_today) {
                             RoundedRectangle(cornerRadius: 3.0).fill(is_target_month ? Color.black : Color.gray)
                                 .frame(height: 25)
                                 .overlay(Circle().fill(Color.red))
-                                .overlay(Text(d.description))
+                                .overlay(Text(day.description))
                                 .foregroundColor(.white)
                         } else {
                             RoundedRectangle(cornerRadius: 3.0).fill(is_target_month ? Color.black : Color.gray)
                                 .frame(height: 25)
-                                .overlay(Text(d.description))
+                                .overlay(Text(day.description))
                                 .foregroundColor(.white)
                         }
                         
                         HStack {
-                            ForEach(CalendarView.shift_type.indices) { j in
-                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: CalendarView.shift_type[j])
+                            ForEach(MonthlyCalendarView.shift_type.indices) { j in
+                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: MonthlyCalendarView.shift_type[j])
                                 
                                 VStack {
                                     ForEach(shifts.indices) { k in
-                                        let index = i * CalendarView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
+                                        let index = i * MonthlyCalendarView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
                                         
-                                        BookButtonView(date: dates[i], category: CalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
+                                        BookButtonView(date: dates[i], category: MonthlyCalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
                                     }
                                 }
                             }
