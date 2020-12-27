@@ -74,10 +74,7 @@ struct WeeklyCalendarView : View {
                 }
                 
                 ForEach(0..<dates.count) { i in
-                    HStack(spacing: 1) {
-                        Divider()
-                        ForEach(CommonDefine.shift_type.indices) { j in
-                            
+                    HStack(spacing: 1) {                        ForEach(CommonDefine.shift_type.indices) { j in
                             let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: CommonDefine.shift_type[j])
                             
                             ZStack {
@@ -88,7 +85,6 @@ struct WeeklyCalendarView : View {
                                 }
                             }
                         }
-                        Divider()
                     }
                 }
             }

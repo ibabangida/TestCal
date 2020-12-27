@@ -47,13 +47,13 @@ struct MonthlyCalendarView : View {
                                 .overlay(Circle().fill(Color.red))
                                 .overlay(Text(day.description))
                                 .foregroundColor(.white)
-                                .padding(.bottom, 0.5)
+                                .padding(.bottom, 2.0)
                         } else {
                             RoundedRectangle(cornerRadius: 3.0).fill(is_target_month ? Color.black : Color.gray)
                                 .frame(height: 25)
                                 .overlay(Text(day.description))
                                 .foregroundColor(.white)
-                                .padding(.bottom, 0.5)
+                                .padding(.bottom, 2.0)
                         }
                         
                         HStack {
