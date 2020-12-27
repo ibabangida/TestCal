@@ -38,7 +38,7 @@ struct WeeklyCalendarView : View {
         let calendar = Calendar(identifier: .gregorian)
         
         VStack {
-            LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8)) {
+            LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 8), spacing: 0) {
                 Text("")
                 ForEach(0..<7) { i in
                     let day = calendar.component(.day, from: dates[i])
@@ -53,6 +53,7 @@ struct WeeklyCalendarView : View {
                                 Text(day.description)
                             })
                             .foregroundColor(.white)
+                            .padding(0)
                     } else {
                         RoundedRectangle(cornerRadius: 3.0).fill(Color.black)
                             .frame(height: 50)
@@ -61,6 +62,7 @@ struct WeeklyCalendarView : View {
                                 Text(day.description)
                             })
                             .foregroundColor(.white)
+                            .padding(0)
                     }
                 }
             }

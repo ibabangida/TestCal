@@ -45,6 +45,7 @@ class CoreDataManager {
         while(!getReservations(predicate: nil).isEmpty) {
             delete(src: getReservations(predicate: nil)[0])
         }
+        save()
     }
     
     func delete(src: Reservation) {
@@ -115,7 +116,7 @@ class CoreDataManager {
         var args: Array<Any> = []
         
         addPredicateArg(format: &format, args: &args, name: "date", val: date)
-        addPredicateArg(format: &format, args: &args, name: "date", val: start_date, operator_str: ">")
+        addPredicateArg(format: &format, args: &args, name: "date", val: start_date, operator_str: ">=")
         addPredicateArg(format: &format, args: &args, name: "date", val: end_date, operator_str: "<")
         addPredicateArg(format: &format, args: &args, name: "category", val: category)
         addPredicateArg(format: &format, args: &args, name: "index", val: index)

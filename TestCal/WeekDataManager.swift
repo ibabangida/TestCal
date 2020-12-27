@@ -21,8 +21,10 @@ class WeekDataManger {
         
         self.year = year
         self.month = month
-        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
         
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
+        start_date = getLastSunday(date: start_date)
+
         reload()
     }
     
@@ -58,16 +60,22 @@ class WeekDataManger {
     
     // reload current month
     func reloadCurrWeek() {
-        start_date = Date()
+        let calendar = Calendar(identifier: .gregorian)
+        
+        let today = Date()
+        let year = calendar.component(.year, from: today)
+        let month = calendar.component(.month, from: today)
+        let day = calendar.component(.day, from: today)
+        
+        start_date = getLastSunday(date: calendar.date(from: DateComponents(year: year, month: month, day: day, hour: 0, minute: 0))!)
+        
         reload()
     }
     
     // reload given month
     func reloadGivenMonth(year: Int, month: Int) {
         let calendar = Calendar(identifier: .gregorian)
-        self.year = year
-        self.month = month
-        self.start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
+        start_date = calendar.date(from: DateComponents(year: year, month: month, day: 1, hour: 0, minute: 0))!
         
         reload()
     }
@@ -86,5 +94,11 @@ class WeekDataManger {
     
     func getStartDate() -> Date {
         return start_date
+    }
+    
+    private func getLastSunday(date: Date) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        let offset = 1 - calendar.component(.weekday, from: date)
+        return calendar.date(byAdding: .day, value: offset, to: date)!
     }
 }
