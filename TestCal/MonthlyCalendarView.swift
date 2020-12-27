@@ -11,7 +11,6 @@ import SwiftUI
 struct MonthlyCalendarView : View {
     private let dates : [Date]
     private let month: Int
-    private static let shift_type = ["A", "B"]
     @EnvironmentObject var popover_condition: PopoverCondition
     
     init(dates: [Date], month: Int) {
@@ -48,22 +47,24 @@ struct MonthlyCalendarView : View {
                                 .overlay(Circle().fill(Color.red))
                                 .overlay(Text(day.description))
                                 .foregroundColor(.white)
+                                .padding(.bottom, 0.5)
                         } else {
                             RoundedRectangle(cornerRadius: 3.0).fill(is_target_month ? Color.black : Color.gray)
                                 .frame(height: 25)
                                 .overlay(Text(day.description))
                                 .foregroundColor(.white)
+                                .padding(.bottom, 0.5)
                         }
                         
                         HStack {
-                            ForEach(MonthlyCalendarView.shift_type.indices) { j in
-                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: MonthlyCalendarView.shift_type[j])
+                            ForEach(CommonDefine.shift_type.indices) { j in
+                                let shifts = DefaultWorkScheduleLoader.shared.getDefaultShifts(type: CommonDefine.shift_type[j])
                                 
                                 VStack {
                                     ForEach(shifts.indices) { k in
-                                        let index = i * MonthlyCalendarView.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
+                                        let index = i * CommonDefine.shift_type.indices.count * shifts.indices.count + j * shifts.indices.count + k
                                         
-                                        BookButtonView(date: dates[i], category: MonthlyCalendarView.shift_type[j], save_index: k, index: index, shift: shifts[k])
+                                        BookButtonView(date: dates[i], category: CommonDefine.shift_type[j], save_index: k, index: index, shift: shifts[k])
                                     }
                                 }
                             }
@@ -74,6 +75,7 @@ struct MonthlyCalendarView : View {
             }
             .padding(3.0)
         }
+        .padding(5.0)
         .environmentObject(PopoverCondition())
     }
 }
