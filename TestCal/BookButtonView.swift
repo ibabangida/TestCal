@@ -65,9 +65,9 @@ struct BookButtonView: View {
     
     private func drawShapeForWeek() -> some View {
         if data_ctrl.hasSave() {
-            return Rectangle().fill(Color.blue).frame(height: height)
+            return Rectangle().fill(Color.gray.opacity(0.3)).frame(height: height)
         } else {
-            return Rectangle().fill(Color.gray.opacity(0.5)).frame(height: height)
+            return Rectangle().fill(Color.blue.opacity(0.8)).frame(height: height)
         }
     }
     
